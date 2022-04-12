@@ -9,11 +9,13 @@
  *
  * Model version                  : 1.11
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Fri Dec  3 22:25:54 2021
+ * C/C++ source code generated on : Tue Apr 12 06:11:48 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
- * Code generation objectives: Unspecified
+ * Code generation objectives:
+ *    1. MISRA C:2012 guidelines
+ *    2. RAM efficiency
  * Validation result: Not run
  */
 

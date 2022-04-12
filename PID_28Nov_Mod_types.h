@@ -3,7 +3,7 @@
  * course requirements at degree granting institutions only.  Not for
  * government, commercial, or other organizational use.
  *
- * File: PID_28Nov_Mod_private.h
+ * File: PID_28Nov_Mod_types.h
  *
  * Code generated for Simulink model 'PID_28Nov_Mod'.
  *
@@ -19,10 +19,11 @@
  * Validation result: Not run
  */
 
-#ifndef RTW_HEADER_PID_28Nov_Mod_private_h_
-#define RTW_HEADER_PID_28Nov_Mod_private_h_
-#include "rtwtypes.h"
-#endif                                 /* RTW_HEADER_PID_28Nov_Mod_private_h_ */
+#ifndef RTW_HEADER_PID_28Nov_Mod_types_h_
+#define RTW_HEADER_PID_28Nov_Mod_types_h_
+
+/* Model Code Variants */
+#endif                                 /* RTW_HEADER_PID_28Nov_Mod_types_h_ */
 
 /*
  * File trailer for generated code.

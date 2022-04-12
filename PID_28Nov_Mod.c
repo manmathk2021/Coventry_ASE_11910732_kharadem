@@ -9,11 +9,13 @@
  *
  * Model version                  : 1.11
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Fri Dec  3 22:25:54 2021
+ * C/C++ source code generated on : Tue Apr 12 06:11:48 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
- * Code generation objectives: Unspecified
+ * Code generation objectives:
+ *    1. MISRA C:2012 guidelines
+ *    2. RAM efficiency
  * Validation result: Not run
  */
 
@@ -42,7 +44,7 @@ void PID_28Nov_Mod_step(void)
    * About '<S1>/TSamp':
    *  y = u * K where K = 1 / ( w * Ts )
    */
-  rtb_TSamp = (70.0 - PID_28Nov_Mod_U.AngSpeedrad_s) * 1800.0;
+  rtb_TSamp = (7.0 - PID_28Nov_Mod_U.AngSpeedrad_s) * 1800.0;
 
   /* Outport: '<Root>/Voltage Correction' incorporates:
    *  Constant: '<Root>/Set Spd'
@@ -62,7 +64,7 @@ void PID_28Nov_Mod_step(void)
    *
    *  Store in Global RAM
    */
-  PID_28Nov_Mod_Y.VoltageCorrection = (((70.0 - PID_28Nov_Mod_U.AngSpeedrad_s) *
+  PID_28Nov_Mod_Y.VoltageCorrection = (((7.0 - PID_28Nov_Mod_U.AngSpeedrad_s) *
     250.0) + PID_28Nov_Mod_DW.DiscreteTimeIntegrator_DSTATE) + (rtb_TSamp -
     PID_28Nov_Mod_DW.UD_DSTATE);
 
@@ -71,7 +73,7 @@ void PID_28Nov_Mod_step(void)
    *  Inport: '<Root>/Ang Speed rad_s'
    *  Sum: '<Root>/Sum'
    */
-  PID_28Nov_Mod_DW.DiscreteTimeIntegrator_DSTATE += (70.0 -
+  PID_28Nov_Mod_DW.DiscreteTimeIntegrator_DSTATE += (7.0 -
     PID_28Nov_Mod_U.AngSpeedrad_s) * 1.1500000000000001;
 
   /* Update for UnitDelay: '<S1>/UD'
@@ -89,7 +91,7 @@ void PID_28Nov_Mod_initialize(void)
   /* ConstCode for Outport: '<Root>/Out1' incorporates:
    *  Constant: '<Root>/Set Spd'
    */
-  PID_28Nov_Mod_Y.Out1 = 70.0;
+  PID_28Nov_Mod_Y.Out1 = 7.0;
 }
 
 /* Model terminate function */
